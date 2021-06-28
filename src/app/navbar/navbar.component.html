@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Sir Planner</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="proje" routerLinkActive="active">Ana Sayfa
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Projeler</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="projeler" routerLinkActive="active" href="#">Projeler</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="projeAdd" routerLinkActive="active" href="#">Proje Ekle</a>
+          <a class="dropdown-item" href="#">Proje Sil</a>
+          <a class="dropdown-item" href="#">Proje Güncelle</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Kullanıcılar</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="kullanicilar" routerLinkActive="active" href="#">Kullanıcılar</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="userAdd" routerLinkActive="active" href="#">Kullanıcı Ekle</a>
+          <a class="dropdown-item" href="#">Kullanıcı Sil</a>
+          <a class="dropdown-item" href="#">Kullanıcı Güncelle</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Görevler</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="gorevler" routerLinkActive="active" href="#">Görevler</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="taskAdd" routerLinkActive="active" href="#">Görev Ekle</a>
+          <a class="dropdown-item" href="#">Görev Sil</a>
+          <a class="dropdown-item" href="#">Görev Güncelle</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Kategoriler</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="kategoriler" routerLinkActive="active" href="#">Kategoriler</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="categoryAdd" routerLinkActive="active" href="#">Kategori Ekle</a>
+          <a class="dropdown-item" href="#">Kategori Sil</a>
+          <a class="dropdown-item" href="#">Kategori Güncelle</a>
+        </div>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Ara">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Ara</button>
+    </form>
+  </div>
+</nav>

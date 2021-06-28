@@ -1,0 +1,47 @@
+<main role="main">
+    <div class="container">
+        <div class="row">
+            <form [formGroup]="userAddForm" (ngSubmit)="add()" class="">
+                <h2 class="mt-12 pt-12">Yeni bir kullanıcı ekle</h2>
+                <div class="form-group">
+                    <input type="text" id="ad" formControlName="ad" class="form-control" placeholder="Ad"
+                        autofocus>
+                    <span class="help-block" *ngIf="userAddForm.get('ad')?.errors && userAddForm.get('ad')?.touched">
+                        Kullanıcı Adı Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="soyad" formControlName="soyad" class="form-control"
+                        placeholder="Soyad" autofocus>
+                    <span class="help-block"
+                        *ngIf="userAddForm.get('soyad')?.errors && userAddForm.get('soyad')?.touched">
+                        Kullanıcı Soyadı Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="eposta" formControlName="eposta" class="form-control"
+                        placeholder="E-posta" autofocus>
+                    <span class="help-block"
+                        *ngIf="userAddForm.get('eposta')?.errors && userAddForm.get('eposta')?.touched">
+                        Kullanıcı E-posta Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="kullanici_adi" formControlName="kullanici_adi" class="form-control"
+                        placeholder="Kullanıcı Adı" autofocus>
+                    <span class="help-block"
+                        *ngIf="userAddForm.get('kullanici_adi')?.errors && userAddForm.get('kullanici_adi')?.touched">
+                        Kullanıcı adı Zorunludur.
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!userAddForm">Kullanıcı
+                    Ekle</button>
+                <h6>{{userAddForm.value|json}}</h6>
+                <h6>{{userAddForm.status|json}}</h6>
+            </form>
+
+        </div>
+
+    </div>
+
+</main>

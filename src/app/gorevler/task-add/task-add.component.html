@@ -1,0 +1,39 @@
+<main role="main">
+    <div class="container task-add-container">
+        <div class="row">
+            <form [formGroup]="taskAddForm" (ngSubmit)="add()" class="">
+                <h2 class="mt-12 pt-12">Yeni bir görev ekle</h2>
+                <div class="form-group">
+                    <input type="text" id="gorev_adi" formControlName="gorev_adi" class="form-control" placeholder="Görev Adı"
+                        autofocus>
+                    <span class="help-block" *ngIf="taskAddForm.get('gorev_adi')?.errors && taskAddForm.get('gorev_adi')?.touched">
+                        Görev Adı Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="gorev_aciklamasi" formControlName="gorev_aciklamasi" class="form-control"
+                        placeholder="Görev Açıklaması" autofocus>
+                    <span class="help-block"
+                        *ngIf="taskAddForm.get('gorev_aciklamasi')?.errors && taskAddForm.get('gorev_aciklamasi')?.touched">
+                        Görev Açıklaması Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="kategori_id" formControlName="kategori_id" class="form-control"
+                        placeholder="Kategori ID" autofocus>
+                    <span class="help-block"
+                        *ngIf="taskAddForm.get('kategori_id')?.errors && taskAddForm.get('kategori_id')?.touched">
+                        Kategori ID Zorunludur.
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!taskAddForm">Görev
+                    Ekle</button>
+                <h6>{{taskAddForm.value|json}}</h6>
+                <h6>{{taskAddForm.status|json}}</h6>
+            </form>
+
+        </div>
+
+    </div>
+
+</main>

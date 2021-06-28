@@ -1,0 +1,29 @@
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div *ngFor="let proje of projeler" class="col-md-6">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#fffff" /><text x="40%" y="50%" fill="#eceeef"
+                            dy=".5em">{{proje.ad}}</text>
+                    </svg>
+
+                    <div class="card-body">
+                        <p class="card-text">{{proje.aciklamalar}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" routerLink="/projeDetail/{{proje.id}}" class="btn btn-sm btn-outline-secondary">Görüntüle</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Düzenle</button>
+                                <button style="width: 65px;" type="delete" (click)="delete(proje.id)" class="btn btn-sm btn-outline-danger">Sil</button>
+                            </div>
+                            <small class="text-muted">4 Hafta</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

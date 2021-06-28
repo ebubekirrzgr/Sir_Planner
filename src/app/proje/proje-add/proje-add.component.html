@@ -1,0 +1,31 @@
+<main role="main">
+    <div class="container">
+        <div class="row">
+            <form [formGroup]="projeAddForm" (ngSubmit)="add()" class="">
+                <h2 class="mt-12 pt-12">Yeni bir proje ekle</h2>
+                <div class="form-group">
+                    <input type="text" id="ad" formControlName="ad" class="form-control" placeholder="Proje Adı"
+                        autofocus>
+                        <span class="help-block"
+                        *ngIf="projeAddForm.get('ad')?.errors && projeAddForm.get('ad')?.touched">
+                        Proje Adı Zorunludur.
+                        </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="aciklamalar" formControlName="aciklamalar" class="form-control" placeholder="Proje Açıklaması"
+                        autofocus>
+                        <span class="help-block"
+                        *ngIf="projeAddForm.get('aciklamalar')?.errors && projeAddForm.get('aciklamalar')?.touched">
+                        Proje Açıklaması Zorunludur.
+                        </span>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!projeAddForm">Proje Ekle</button>
+                <h6>{{projeAddForm.value|json}}</h6>
+                <h6>{{projeAddForm.status|json}}</h6>
+            </form>
+
+        </div>
+
+    </div>
+
+</main>

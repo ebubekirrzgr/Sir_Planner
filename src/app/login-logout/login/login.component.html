@@ -1,0 +1,31 @@
+<div class="container-login100" style="background-image: url('images/bg-04.jpg');">
+    <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+        <form #loginForm='ngForm'  class="login100-form validate-form">
+
+            <div class="flex-c p-b-12">
+                <a href="#">
+                    <img src="../../../assets/sp2.png">
+                </a>
+            </div>
+
+            <span class="login100-form-title p-b-37">
+                Giris Yap
+            </span>
+
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Kullanici adi veya email giriniz">
+                <input class="input100" type="text"  placeholder="E-posta" required ngModel name="username"> 
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-25" data-validate="Sifre giriniz">
+                <input class="input100" type="password"  placeholder="sifre" required ngModel name="pass">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-login100-form-btn">
+                <button [disabled]="!loginForm.valid" type="submit" class="login100-form-btn">GIRIS YAP</button>                
+            </div>
+
+        </form>
+    </div>
+</div>
