@@ -1,0 +1,17 @@
+<main role="main">
+    <div class="container task-add-container">
+        <div class="row">
+            <form [formGroup]="teamAddForm" (ngSubmit)="add()" class="">
+                <h2 class="mt-12 pt-12">Yeni bir takim ekle</h2>
+                <div class="form-group">
+                    <input type="text" id="takim_adi" formControlName="takim_adi" class="form-control" placeholder="Takım Adı"
+                        autofocus>
+                    <span class="help-block" *ngIf="teamAddForm.get('takim_adi')?.errors && teamAddForm.get('takim_adi')?.touched">
+                        Takım Adı Zorunludur.
+                    </span>
+                </div>                          
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!teamAddForm">Takım Ekle</button>                
+            </form>
+        </div>
+    </div>
+</main>

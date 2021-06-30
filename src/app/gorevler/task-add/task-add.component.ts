@@ -10,34 +10,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./task-add.component.css'],
   providers: [GorevService]
 })
-export class TaskAddComponent implements OnInit {constructor(
-  private gorevService: GorevService,
-  private formBuilder: FormBuilder,
-  private router: Router              
-  ) { }
+export class TaskAddComponent implements OnInit {
+    constructor(
+      private gorevService: GorevService,
+      private formBuilder: FormBuilder,
+      private router: Router
+    ) { }
 
-gorev!: Gorev;
-taskAddForm!: FormGroup;
+  gorev!: Gorev;
+  taskAddForm!: FormGroup;
 
-createTaskForm() {
-this.taskAddForm = this.formBuilder.group({
-gorev_adi: ["", Validators.required],
-gorev_aciklamasi: ["", Validators.required],
-kategori_id: ["", Validators.required],
-})
-}
-ngOnInit(): void {
-this.createTaskForm();
-}
-add() {
-if(this.taskAddForm.valid){
-this.gorev = Object.assign({},this.taskAddForm.value)
+  createTaskForm() {
+    this.taskAddForm = this.formBuilder.group({
+      gorev_adi: ["", Validators.required],
+      gorev_aciklamasi: ["", Validators.required],
+      kategori_id: ["", Validators.required],
+    })
+  }
+  ngOnInit(): void {
+    this.createTaskForm();
+  }
+  add() {
+    if (this.taskAddForm.valid) {
+      this.gorev = Object.assign({}, this.taskAddForm.value)
 
-this.gorevService.add(this.gorev)
-setTimeout(() => {
-  this.router.navigate(['gorevler']);
-}, 2000);  //5s  
+      this.gorevService.add(this.gorev)
+      setTimeout(() => {
+        this.router.navigate(['gorevler']);
+      }, 2000);  //5s  
 
-}
-}
+    }
+  }
 }

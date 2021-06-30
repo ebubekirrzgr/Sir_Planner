@@ -23,6 +23,8 @@ import { TaskAddComponent } from './gorevler/task-add/task-add.component';
 import { KategorilerComponent } from './kategoriler/kategoriler.component';
 import { CategoryAddComponent } from './kategoriler/category-add/category-add.component';
 import { ProjeEditComponent } from './proje/proje-edit/proje-edit.component';
+import { TakimlarComponent } from './takimlar/takimlar.component';
+import { TeamAddComponent } from './takimlar/team-add/team-add.component';
 
 
 const routes : Routes =[
@@ -47,7 +49,9 @@ const routes : Routes =[
     TaskAddComponent,
     KategorilerComponent,
     CategoryAddComponent,
-    ProjeEditComponent
+    ProjeEditComponent,
+    TakimlarComponent,
+    TeamAddComponent
   ],
   imports: [
     BrowserModule,

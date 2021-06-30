@@ -65,3 +65,9 @@ body {
 .text-white-50 { color: rgba(255, 255, 255, .5); }
 
 .bg-purple { background-color: #6f42c1; }
+.b,strong{
+  margin-left: 5px;
+}
+.d-block{
+  margin-left: 10px;
+}

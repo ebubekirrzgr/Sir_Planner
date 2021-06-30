@@ -10,6 +10,8 @@ import { UserAddComponent } from "./kullanicilar-tablo/user-add/user-add.compone
 import { KategorilerComponent } from "./kategoriler/kategoriler.component";
 import { CategoryAddComponent } from "./kategoriler/category-add/category-add.component";
 import { ProjeEditComponent } from "./proje/proje-edit/proje-edit.component";
+import { TakimlarComponent } from "./takimlar/takimlar.component";
+import { TeamAddComponent } from "./takimlar/team-add/team-add.component";
 
 export const appRoutes: Routes = [
     { path: "projeler", component: ProjeComponent },
@@ -22,9 +24,12 @@ export const appRoutes: Routes = [
 
     { path: "kategoriler", component: KategorilerComponent },
     { path: "categoryAdd", component: CategoryAddComponent },
-    
+
     { path: "kullanicilar", component: KullanicilarTabloComponent },
     { path: "userAdd", component: UserAddComponent },
+
+    { path: "takimlar", component: TakimlarComponent },
+    { path: "teamAdd", component: TeamAddComponent },
 
     { path: "giris", component: LoginComponent },
 
