@@ -12,6 +12,7 @@ import { CategoryAddComponent } from "./kategoriler/category-add/category-add.co
 import { ProjeEditComponent } from "./proje/proje-edit/proje-edit.component";
 import { TakimlarComponent } from "./takimlar/takimlar.component";
 import { TeamAddComponent } from "./takimlar/team-add/team-add.component";
+import { TakimGorevleriComponent } from "./takimlar/takim-gorevleri/takim-gorevleri.component";
 
 export const appRoutes: Routes = [
     { path: "projeler", component: ProjeComponent },
@@ -30,6 +31,8 @@ export const appRoutes: Routes = [
 
     { path: "takimlar", component: TakimlarComponent },
     { path: "teamAdd", component: TeamAddComponent },
+
+    { path: "takimGorevleri", component: TakimGorevleriComponent },
 
     { path: "giris", component: LoginComponent },
 

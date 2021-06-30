@@ -25,6 +25,9 @@ import { CategoryAddComponent } from './kategoriler/category-add/category-add.co
 import { ProjeEditComponent } from './proje/proje-edit/proje-edit.component';
 import { TakimlarComponent } from './takimlar/takimlar.component';
 import { TeamAddComponent } from './takimlar/team-add/team-add.component';
+import { TakimGorevleriComponent } from './takimlar/takim-gorevleri/takim-gorevleri.component';
+import { TeamTasksAddComponent } from './takimlar/takim-gorevleri/team-tasks-add/team-tasks-add.component';
+
 
 
 const routes : Routes =[
@@ -51,7 +54,10 @@ const routes : Routes =[
     CategoryAddComponent,
     ProjeEditComponent,
     TakimlarComponent,
-    TeamAddComponent
+    TeamAddComponent,
+    TakimGorevleriComponent,
+    TeamTasksAddComponent,
+    
   ],
   imports: [
     BrowserModule,
