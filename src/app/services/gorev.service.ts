@@ -29,4 +29,9 @@ add(gorev: any ) {
      
   });
 }
+delete(id: number) {
+  this.httpClient.delete(this.path + "gorevler/delete?id=" + id).subscribe(data => {
+    this.alertifyService.success("Gorev başarıyla silindi.")
+  });
+}
 }

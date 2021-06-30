@@ -12,7 +12,7 @@
         <div  class="pb-3 mb-0 small lh-sm border-bottom w-100">
           <div class="d-flex justify-content-between">
             <strong class="text-gray-dark">{{gorev.gorev_adi}}</strong>
-            <a href="#">Görüntüle</a>
+            <button style="width: 65px;" type="delete" (click)="delete(gorev.id)" class="btn btn-sm btn-outline-danger float-right">Sil</button>
           </div>
           <span class="d-block">{{gorev.gorev_aciklamasi}}</span>
         </div>

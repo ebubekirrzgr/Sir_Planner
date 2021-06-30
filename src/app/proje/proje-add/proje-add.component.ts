@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjeService } from 'src/app/services/proje.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
 import { Proje } from 'src/app/models/proje';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proje-add',
@@ -13,7 +13,8 @@ import { Proje } from 'src/app/models/proje';
 export class ProjeAddComponent implements OnInit {
 
   constructor(private projeService: ProjeService,
-              private formBuilder: FormBuilder              
+              private formBuilder: FormBuilder ,
+              private router: Router             
               ) { }
 
   proje!: Proje;
@@ -30,12 +31,14 @@ export class ProjeAddComponent implements OnInit {
   }
   add() {
     if(this.projeAddForm.valid){
-      this.proje = Object.assign({},this.projeAddForm.value)
-     // this.proje.userId =1;
-      this.projeService.add(this.proje)
-        
+      this.proje = Object.assign({},this.projeAddForm.value)     
+      this.projeService.add(this.proje)     
+      setTimeout(() => {
+        this.router.navigate(['projeler']);
+      }, 2000);  //5s  
 
     }
   }
+  
 
 }

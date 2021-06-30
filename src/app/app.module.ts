@@ -22,6 +22,7 @@ import { GorevlerComponent } from './gorevler/gorevler.component';
 import { TaskAddComponent } from './gorevler/task-add/task-add.component';
 import { KategorilerComponent } from './kategoriler/kategoriler.component';
 import { CategoryAddComponent } from './kategoriler/category-add/category-add.component';
+import { ProjeEditComponent } from './proje/proje-edit/proje-edit.component';
 
 
 const routes : Routes =[
@@ -45,7 +46,8 @@ const routes : Routes =[
     GorevlerComponent,
     TaskAddComponent,
     KategorilerComponent,
-    CategoryAddComponent
+    CategoryAddComponent,
+    ProjeEditComponent
   ],
   imports: [
     BrowserModule,

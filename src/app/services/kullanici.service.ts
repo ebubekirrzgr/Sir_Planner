@@ -31,7 +31,7 @@ add(kullanici: any ) {
 }
 delete(id: number ) {
   this.httpClient.delete(this.path + "kullanicilar/delete?id=" + id).subscribe(data=> {
-    this.alertifyService.success("Proje başarıyla silindi.")       
+    this.alertifyService.success("Kullanıcı başarıyla silindi.")       
   });
 }
 }

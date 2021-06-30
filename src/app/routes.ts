@@ -9,11 +9,13 @@ import { TaskAddComponent } from "./gorevler/task-add/task-add.component";
 import { UserAddComponent } from "./kullanicilar-tablo/user-add/user-add.component";
 import { KategorilerComponent } from "./kategoriler/kategoriler.component";
 import { CategoryAddComponent } from "./kategoriler/category-add/category-add.component";
+import { ProjeEditComponent } from "./proje/proje-edit/proje-edit.component";
 
 export const appRoutes: Routes = [
     { path: "projeler", component: ProjeComponent },
     { path: "projeAdd", component: ProjeAddComponent },
     { path: "projeDetail/:id", component: ProjeDetailComponent },
+    { path: "projeEdit/:id", component: ProjeEditComponent },
 
     { path: "gorevler", component: GorevlerComponent },
     { path: "taskAdd", component: TaskAddComponent },

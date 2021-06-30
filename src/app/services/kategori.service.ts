@@ -29,4 +29,9 @@ add(kategori: any ) {
      
   });
 }
+delete(id: number) {
+  this.httpClient.delete(this.path + "kategoriler/delete?id=" + id).subscribe(data => {
+    this.alertifyService.success("Kategori başarıyla silindi.")
+  });
+}
 }

@@ -7,7 +7,8 @@ import { ProjeService } from '../services/proje.service';
   selector: 'app-proje',
   templateUrl: './proje.component.html',
   styleUrls: ['./proje.component.css'],
-  providers:[ProjeService]
+  providers:[ProjeService],
+ 
 })
 export class ProjeComponent implements OnInit {
 
@@ -18,16 +19,15 @@ export class ProjeComponent implements OnInit {
     this.projeService.getProjeler().subscribe(data => {
       this.projeler = data;
     })
-  }
-  // delete() {    
-  //     this.projeler = Object.assign({}, this.projeler)
-  //     this.projeService.add(this.projeler)    
-  // }
- 
+  }  
   delete(id:number){
     this.projeService.delete(id) ;
     setTimeout(location.reload.bind(location), 2000);
   }
+  
+
+
+
 
  
 }

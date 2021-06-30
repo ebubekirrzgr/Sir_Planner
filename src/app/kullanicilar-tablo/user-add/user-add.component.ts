@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { KullaniciService } from 'src/app/services/kullanici.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
 import { Kullanici } from 'src/app/models/kullanici';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-add',
@@ -10,9 +11,10 @@ import { Kullanici } from 'src/app/models/kullanici';
   providers: [KullaniciService]
 })
 export class UserAddComponent implements OnInit {
-    constructor(private kullaniciService: KullaniciService,
-      private formBuilder: FormBuilder
-    ) { }
+  constructor(private kullaniciService: KullaniciService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) { }
 
   kullanici!: Kullanici;
   userAddForm!: FormGroup;
@@ -32,7 +34,12 @@ export class UserAddComponent implements OnInit {
     if (this.userAddForm.valid) {
       this.kullanici = Object.assign({}, this.userAddForm.value)
       this.kullaniciService.add(this.kullanici)
+      setTimeout(() => {
+        this.router.navigate(['kullanicilar']);
+      }, 2000);  //2s
     }
-  }
 
+  }
 }
+
+
