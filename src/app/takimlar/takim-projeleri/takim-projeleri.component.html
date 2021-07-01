@@ -1,8 +1,8 @@
 
 <main class="container">
     <div class="my-3 p-3 bg-white rounded shadow-sm">
-      <h6 class="border-bottom pb-2 mb-0">Takim Gorevleri</h6>
-      <div *ngFor='let takimgorevleri of takimGorevleri' class="d-flex text-muted pt-3">
+      <h6 class="border-bottom pb-2 mb-0">Takim Projeleri</h6>
+      <div *ngFor='let takimprojeleri of takimProjeleri' class="d-flex text-muted pt-3">
         <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
           xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
           preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -12,23 +12,23 @@
   
         <div  class="pb-3 mb-0 small lh-sm border-bottom w-100">
           <div class="d-flex justify-content-between">
-            <strong class="text-gray-dark">Takım ID: {{takimgorevleri.takim_id}}</strong>
-            <button style="width: 65px;" type="delete" (click)="delete(takimgorevleri.id)" class="btn btn-sm btn-outline-danger float-right">Sil</button>
+            <strong class="text-gray-dark">Takım ID: {{takimprojeleri.takim_id}}</strong>
+            <button style="width: 65px;" type="delete" (click)="delete(takimprojeleri.id)" class="btn btn-sm btn-outline-danger float-right">Sil</button>
           </div>
-          <span class="d-block">Gorev ID: {{takimgorevleri.gorev_id}}</span>
+          <span class="d-block">Proje ID: {{takimprojeleri.proje_id}}</span>
         </div>
       </div>
     </div>
     <br>
     <div class="row">
     <div style="width: 50%;background-color:#a8b3ea;">
-        <h2 style="text-decoration: underline;" class="mt-6 pt-6">Görevler</h2>
-        <div *ngFor='let gorev of gorevler' class="d-flex text-muted pt-3">
+        <h2 style="text-decoration: underline;" class="mt-6 pt-6">Projeler</h2>
+        <div *ngFor='let proje of projeler' class="d-flex text-muted pt-3">
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
-                    <strong class="text-gray-dark">Görev ID:{{gorev.id}}</strong>
+                    <strong class="text-gray-dark">Proje ID:{{proje.id}}</strong>
                 </div>
-                <span class="d-block">Gorev Adı: {{gorev.gorev_adi}}</span>
+                <span class="d-block">Proje Adı: {{proje.ad}}</span>
             </div>
         </div>
     </div>
@@ -44,5 +44,5 @@
     </div>
     </div>
 </div>
-</main>
+  </main>
  

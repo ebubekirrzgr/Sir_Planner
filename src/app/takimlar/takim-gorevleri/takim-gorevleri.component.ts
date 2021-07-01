@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { TakimGorevleri } from "../../models/takim-gorevleri";
 import { HttpClient } from '@angular/common/http';
 import { TakimGorevleriService } from '../../services/takim-gorevleri.service';
-import { TakimService } from '../../services/takim.service';
 import { Takim } from "../../models/takim";
 import { Gorev } from 'src/app/models/gorev';
 
