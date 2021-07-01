@@ -28,6 +28,7 @@ import { TeamAddComponent } from './takimlar/team-add/team-add.component';
 import { TakimGorevleriComponent } from './takimlar/takim-gorevleri/takim-gorevleri.component';
 import { TeamTasksAddComponent } from './takimlar/takim-gorevleri/team-tasks-add/team-tasks-add.component';
 import { TakimProjeleriComponent } from './takimlar/takim-projeleri/takim-projeleri.component';
+import { TeamProjectsAddComponent } from './takimlar/takim-projeleri/team-projects-add/team-projects-add.component';
 
 
 
@@ -60,6 +61,7 @@ const routes : Routes =[
     TakimGorevleriComponent,
     TeamTasksAddComponent,
     TakimProjeleriComponent,
+    TeamProjectsAddComponent,
    
     
   ],
