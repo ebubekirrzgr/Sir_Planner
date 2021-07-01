@@ -30,6 +30,7 @@ import { TeamTasksAddComponent } from './takimlar/takim-gorevleri/team-tasks-add
 
 
 
+
 const routes : Routes =[
   {path:"kullanicilar", component:KullanicilarTabloComponent},
   {path:"",redirectTo:"kullanicilar",pathMatch:"full"},
@@ -57,6 +58,7 @@ const routes : Routes =[
     TeamAddComponent,
     TakimGorevleriComponent,
     TeamTasksAddComponent,
+   
     
   ],
   imports: [
