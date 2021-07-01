@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { TakimGorevleriService } from '../../../services/takim-gorevleri.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
-
+import { Gorev } from 'src/app/models/gorev';
+import { Takim } from "../../../models/takim";
 @Component({
   selector: 'app-team-tasks-add',
   templateUrl: './team-tasks-add.component.html',
@@ -16,11 +17,16 @@ export class TeamTasksAddComponent implements OnInit {
   constructor(   
     private takimGorevleriService: TakimGorevleriService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) { }
 
   path: string = "https://localhost:5001/api/takimgorevleri";
+  gpath:string="https://localhost:5001/api/gorevler";
+  tpath:string="https://localhost:5001/api/takimlar"
   takimGorevleri!: TakimGorevleri[] | any; 
+  gorevler!: Gorev []|any;
+  takimlar!:Takim []|any;
   teamTaskAddForm!: FormGroup;
 
   createTeamTaskForm() {
@@ -33,7 +39,8 @@ export class TeamTasksAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.createTeamTaskForm();  
-    
+    this.getGorevler() ;
+    this.getTakimlar();
   }
  
   
@@ -45,13 +52,20 @@ export class TeamTasksAddComponent implements OnInit {
         this.router.navigate(['kullaniciGorevleri']);
       }, 2000);  //2s
     }
-
   }
 
   delete(id:number){
     this.takimGorevleriService.delete(id) ;
     setTimeout(location.reload.bind(location), 2000);
   }
-  
-
+   getGorevler() {
+    this.http.get<TakimGorevleri[]>(this.gpath).subscribe(response => {
+      this.gorevler = response;
+    })
+  }
+  getTakimlar(){
+    this.http.get<TakimGorevleri[]>(this.tpath).subscribe(response =>{
+      this.takimlar =response;
+    })
+  }
 }

@@ -24,4 +24,29 @@
             </form>
         </div>
     </div>
+    <br>
+    <div class="row">
+    <div style="width: 50%;background-color:#a8b3ea;">
+        <h2 style="text-decoration: underline;" class="mt-6 pt-6">Görevler</h2>
+        <div *ngFor='let gorev of gorevler' class="d-flex text-muted pt-3">
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
+                    <strong class="text-gray-dark">Görev ID:{{gorev.id}}</strong>
+                </div>
+                <span class="d-block">Gorev Adı: {{gorev.gorev_adi}}</span>
+            </div>
+        </div>
+    </div>
+    <div style="width: 50%; background-color:#f5baa7;">
+        <h2 style="text-decoration: underline;" class="mt-6 pt-6">Takımlar</h2>
+        <div *ngFor='let takim of takimlar' class="d-flex text-muted pt-3">
+    <div  class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <strong class="text-gray-dark">Takım ID:{{takim.id}}</strong>
+        </div>
+        <span class="d-block">Takım Adı:{{takim.takim_adi}}</span>
+      </div>
+    </div>
+    </div>
+</div>
 </main>
