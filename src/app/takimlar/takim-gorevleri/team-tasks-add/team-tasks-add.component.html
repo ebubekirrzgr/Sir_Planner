@@ -1,1 +1,27 @@
-<p>team-tasks-add works!</p>
+<main class="container">
+    <div class="container">
+        <div class="row">
+            <form [formGroup]="teamTaskAddForm" (ngSubmit)="add()" class="">
+                <h2 class="mt-12 pt-12">Yeni bir Takim Görevi ekle</h2>
+                <div class="form-group">
+                    <input type="text" id="takim_id" formControlName="takim_id" class="form-control"
+                        placeholder="Takim ID" autofocus>
+                    <span class="help-block"
+                        *ngIf="teamTaskAddForm.get('takim_id')?.errors && teamTaskAddForm.get('takim_id')?.touched">
+                        Takım ID Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="gorev_id" formControlName="gorev_id" class="form-control"
+                        placeholder="Gorev ID" autofocus>
+                    <span class="help-block"
+                        *ngIf="teamTaskAddForm.get('gorev_id')?.errors && teamTaskAddForm.get('gorev_id')?.touched">
+                        Görev ID Zorunludur.
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!teamTaskAddForm">Takım
+                    Görevi Ekle</button>
+            </form>
+        </div>
+    </div>
+</main>

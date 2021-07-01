@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Takim } from "../models/takim";
 import { AlertifyService } from './alertify.service';
 import { Router } from '@angular/router';
+import { Gorev } from "../models/gorev";
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,9 @@ export class TakimService {
 
   getTakimlar(): Observable<Takim[]> {
     return this.httpClient.get<Takim[]>(this.path + "takimlar")
+  }
+  getGorevler(): Observable<Gorev[]> {
+    return this.httpClient.get<Gorev[]>(this.path + "gorevler")
   }
   getTakimById(id: number): Observable<Takim> {
     return this.httpClient.get<Takim>(this.path + "takimlar/detail?id=" + id)

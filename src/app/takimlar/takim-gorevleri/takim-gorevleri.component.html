@@ -1,3 +1,4 @@
+
 <main class="container">
     <div class="my-3 p-3 bg-white rounded shadow-sm">
       <h6 class="border-bottom pb-2 mb-0">Takim Gorevleri</h6>
@@ -14,8 +15,17 @@
             <strong class="text-gray-dark">{{takimgorevleri.takim_id}}</strong>
             <button style="width: 65px;" type="delete" (click)="delete(takimgorevleri.id)" class="btn btn-sm btn-outline-danger float-right">Sil</button>
           </div>
-          <span class="d-block">{{takimgorevleri.id}}</span>
+          <span class="d-block">{{takimgorevleri.gorev_id}}</span>
         </div>
       </div>
     </div>
+    <div *ngFor='let gorev of gorevler' class="d-flex text-muted pt-3">
+      <div  class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <strong class="text-gray-dark">Görev ID:{{gorev.id}}</strong>          
+        </div>
+        <span class="d-block">Gorev Adı: {{gorev.gorev_adi}}</span>
+      </div>
+    </div>
   </main>
+ 
