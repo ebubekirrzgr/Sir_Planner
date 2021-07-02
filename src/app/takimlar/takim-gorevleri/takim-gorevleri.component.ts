@@ -15,7 +15,6 @@ export class TakimGorevleriComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-
     private takimGorevleriService: TakimGorevleriService) { }
 
   path: string = "https://localhost:5001/api/takimgorevleri";

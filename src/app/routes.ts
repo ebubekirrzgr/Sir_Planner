@@ -16,6 +16,7 @@ import { TakimGorevleriComponent } from "./takimlar/takim-gorevleri/takim-gorevl
 import { TeamTasksAddComponent } from "./takimlar/takim-gorevleri/team-tasks-add/team-tasks-add.component";
 import { TakimProjeleriComponent } from "./takimlar/takim-projeleri/takim-projeleri.component";
 import { TeamProjectsAddComponent } from "./takimlar/takim-projeleri/team-projects-add/team-projects-add.component";
+import { KullaniciGorevleriComponent } from "./kullanicilar-tablo/kullanici-gorevleri/kullanici-gorevleri.component";
 export const appRoutes: Routes = [
     { path: "projeler", component: ProjeComponent },
     { path: "projeAdd", component: ProjeAddComponent },
@@ -30,6 +31,7 @@ export const appRoutes: Routes = [
 
     { path: "kullanicilar", component: KullanicilarTabloComponent },
     { path: "userAdd", component: UserAddComponent },
+    { path: "kullaniciGorevleri", component: KullaniciGorevleriComponent },
 
     { path: "takimlar", component: TakimlarComponent },
     { path: "teamAdd", component: TeamAddComponent },
