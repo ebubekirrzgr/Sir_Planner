@@ -1,1 +1,52 @@
-<p>user-teams-add works!</p>
+<main class="container">
+    <div class="container">
+        <div class="row">
+            <form [formGroup]="userTaskAddForm" (ngSubmit)="add()" class="">
+                <h2 class="mt-12 pt-12">Yeni bir Kullanıcı Takımı ekle</h2>
+                <div class="form-group">
+                    <input type="text" id="kullanici_id" formControlName="kullanici_id" class="form-control"
+                        placeholder="Kullanıcı ID" autofocus>
+                    <span class="help-block"
+                        *ngIf="userTaskAddForm.get('kullanici_id')?.errors && userTaskAddForm.get('kullanici_id')?.touched">
+                        Kullanıcı ID Zorunludur.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="takim_id" formControlName="takim_id" class="form-control"
+                        placeholder="Takım ID" autofocus>
+                    <span class="help-block"
+                        *ngIf="userTaskAddForm.get('takim_id')?.errors && userTaskAddForm.get('takim_id')?.touched">
+                        Takım ID Zorunludur.
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!userTaskAddForm">Kullanıcı
+                    Takımı Ekle</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+    <div style="width: 50%;background-color:#a8b3ea;">
+        <h2 style="text-decoration: underline;" class="mt-6 pt-6">Takımlar</h2>
+        <div *ngFor='let takim of takimlar' class="d-flex text-muted pt-3">
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
+                    <strong class="text-gray-dark">Takım ID:{{takim.id}}</strong>
+                </div>
+                <span class="d-block">Takım Adı: {{takim.takim_adi}}</span>
+            </div>
+        </div>
+    </div>
+    <div style="width: 50%; background-color:#f5baa7;">
+        <h2 style="text-decoration: underline;" class="mt-6 pt-6">Kullanıcılar</h2>
+        <div *ngFor='let kullanici of kullanicilar' class="d-flex text-muted pt-3">
+    <div  class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <strong class="text-gray-dark">Kullanıcı ID:{{kullanici.id}}</strong>
+        </div>
+        <span class="d-block">Kullanıcı Adı:{{kullanici.kullanici_adi}}</span>
+      </div>
+    </div>
+    </div>
+</div>
+</main>

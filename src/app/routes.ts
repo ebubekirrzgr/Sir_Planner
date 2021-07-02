@@ -35,9 +35,9 @@ export const appRoutes: Routes = [
     { path: "kullanicilar", component: KullanicilarTabloComponent },
     { path: "userAdd", component: UserAddComponent },
     { path: "kullaniciGorevleri", component: KullaniciGorevleriComponent },
-    { path: "UserTasksAddComponent",component:UserTasksAddComponent},
+    { path: "userTasksAdd",component:UserTasksAddComponent},
     { path: "kullaniciTakimlari", component: KullaniciTakimlariComponent },
-    { path: "UserTeamsAddComponent",component:UserTeamsAddComponent},
+    { path: "userTeamsAdd",component:UserTeamsAddComponent},
 
 
     { path: "takimlar", component: TakimlarComponent },
