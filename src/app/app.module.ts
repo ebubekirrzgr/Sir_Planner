@@ -30,6 +30,7 @@ import { TeamTasksAddComponent } from './takimlar/takim-gorevleri/team-tasks-add
 import { TakimProjeleriComponent } from './takimlar/takim-projeleri/takim-projeleri.component';
 import { TeamProjectsAddComponent } from './takimlar/takim-projeleri/team-projects-add/team-projects-add.component';
 import { KullaniciGorevleriComponent } from './kullanicilar-tablo/kullanici-gorevleri/kullanici-gorevleri.component';
+import { UserTasksAddComponent } from './kullanicilar-tablo/kullanici-gorevleri/user-tasks-add/user-tasks-add.component';
 
 
 
@@ -64,6 +65,7 @@ const routes : Routes =[
     TakimProjeleriComponent,
     TeamProjectsAddComponent,
     KullaniciGorevleriComponent,
+    UserTasksAddComponent,
    
     
   ],
