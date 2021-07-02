@@ -20,21 +20,19 @@ export class KullaniciGorevleriComponent implements OnInit {
   ) { }
 
   path: string = "https://localhost:5001/api/kullanicigorevleri";
-  tpath: string = "https://localhost:5001/api/kullanicilar";
+  upath: string = "https://localhost:5001/api/kullanicilar";
   gpath:string="https://localhost:5001/api/gorevler";
   kullaniciGorevleri!: KullaniciGorevleri[] | any;
   kullanicilar!: Kullanici[]|any;
   gorevler!: Gorev []|any;
   
-
-
   ngOnInit(): void {
     this.getKullaniciGorevleri();
     this.getGorevler() ;
     this.getKullanicilar();
   }
   getKullanicilar(){
-    this.http.get<KullaniciGorevleri[]>(this.tpath).subscribe(response =>{
+    this.http.get<KullaniciGorevleri[]>(this.upath).subscribe(response =>{
       this.kullanicilar =response;
     })
     

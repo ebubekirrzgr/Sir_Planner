@@ -18,6 +18,8 @@ import { TakimProjeleriComponent } from "./takimlar/takim-projeleri/takim-projel
 import { TeamProjectsAddComponent } from "./takimlar/takim-projeleri/team-projects-add/team-projects-add.component";
 import { KullaniciGorevleriComponent } from "./kullanicilar-tablo/kullanici-gorevleri/kullanici-gorevleri.component";
 import { UserTasksAddComponent } from "./kullanicilar-tablo/kullanici-gorevleri/user-tasks-add/user-tasks-add.component";
+import { UserTeamsAddComponent } from "./kullanicilar-tablo/kullanici-takimlari/user-teams-add/user-teams-add.component";
+import { KullaniciTakimlariComponent } from "./kullanicilar-tablo/kullanici-takimlari/kullanici-takimlari.component";
 export const appRoutes: Routes = [
     { path: "projeler", component: ProjeComponent },
     { path: "projeAdd", component: ProjeAddComponent },
@@ -34,6 +36,8 @@ export const appRoutes: Routes = [
     { path: "userAdd", component: UserAddComponent },
     { path: "kullaniciGorevleri", component: KullaniciGorevleriComponent },
     { path: "UserTasksAddComponent",component:UserTasksAddComponent},
+    { path: "kullaniciTakimlari", component: KullaniciTakimlariComponent },
+    { path: "UserTeamsAddComponent",component:UserTeamsAddComponent},
 
 
     { path: "takimlar", component: TakimlarComponent },
