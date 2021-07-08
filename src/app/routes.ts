@@ -20,7 +20,9 @@ import { KullaniciGorevleriComponent } from "./kullanicilar-tablo/kullanici-gore
 import { UserTasksAddComponent } from "./kullanicilar-tablo/kullanici-gorevleri/user-tasks-add/user-tasks-add.component";
 import { UserTeamsAddComponent } from "./kullanicilar-tablo/kullanici-takimlari/user-teams-add/user-teams-add.component";
 import { KullaniciTakimlariComponent } from "./kullanicilar-tablo/kullanici-takimlari/kullanici-takimlari.component";
+import { AnaSayfaComponent } from "./ana-sayfa/ana-sayfa/ana-sayfa.component";
 export const appRoutes: Routes = [
+    { path: "anasayfa", component: AnaSayfaComponent},
     { path: "projeler", component: ProjeComponent },
     { path: "projeAdd", component: ProjeAddComponent },
     { path: "projeDetail/:id", component: ProjeDetailComponent },
@@ -51,5 +53,5 @@ export const appRoutes: Routes = [
 
     { path: "giris", component: LoginComponent },
 
-    { path: "**", redirectTo: "projeler", pathMatch: "full" }
+    { path: "**", redirectTo: "anasayfa", pathMatch: "full" }
 ]

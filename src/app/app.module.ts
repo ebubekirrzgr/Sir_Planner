@@ -33,6 +33,7 @@ import { KullaniciGorevleriComponent } from './kullanicilar-tablo/kullanici-gore
 import { UserTasksAddComponent } from './kullanicilar-tablo/kullanici-gorevleri/user-tasks-add/user-tasks-add.component';
 import { KullaniciTakimlariComponent } from './kullanicilar-tablo/kullanici-takimlari/kullanici-takimlari.component';
 import { UserTeamsAddComponent } from './kullanicilar-tablo/kullanici-takimlari/user-teams-add/user-teams-add.component';
+import { AnaSayfaComponent } from './ana-sayfa/ana-sayfa/ana-sayfa.component';
 
 
 
@@ -70,6 +71,7 @@ const routes : Routes =[
     UserTasksAddComponent,
     KullaniciTakimlariComponent,
     UserTeamsAddComponent,
+    AnaSayfaComponent,
    
     
   ],
